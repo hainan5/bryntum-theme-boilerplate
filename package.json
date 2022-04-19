@@ -1,0 +1,63 @@
+{
+  "name": "cra",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@bryntum/demo-resources": "^1.0.1",
+    "@bryntum/gantt": "^4.3.1",
+    "@bryntum/gantt-react": "^4.3.1",
+    "@bryntum/scheduler": "^4.3.1",
+    "@bryntum/scheduler-react": "^4.3.1",
+    "@bryntum/schedulerpro": "^4.3.1",
+    "@bryntum/schedulerpro-react": "^4.3.1",
+    "@bryntum/grid": "^4.3.2",
+    "@bryntum/grid-react": "^4.3.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "postinstall": "^0.7.4",
+    "sass": "^1.43.4"
+  },
+  "postinstall": {
+    "node_modules/@bryntum/demo-resources/images/users/*": "copy public/users/",
+    "node_modules/@bryntum/demo-resources/images/favicon.png": "copy public/",
+    "node_modules/@bryntum/grid/*.css": "copy public/themes/",
+    "node_modules/@bryntum/grid/fonts/*": "copy public/themes/fonts/"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "postinstall"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-undef": "off",
+      "no-restricted-globals": "off",
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+@import './material.css';
+
+.b-toolbar {
+    background-color: #007d71;
+    color: #616161;
+    flex-shrink: 0
+}
