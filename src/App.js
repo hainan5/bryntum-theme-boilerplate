@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BryntumGrid } from "@bryntum/grid-react";
 import { DomHelper } from "@bryntum/grid/grid.umd";
-import style from "./App.css";
+import GanttInstance from "./component/gantt";
+import style from "./Style.css";
 
 const dataGenerate = (number) => {
   const data = [];
@@ -130,12 +131,18 @@ const App = (props) => {
   };
 
   useEffect(() => {
+    //设置整体的主题
     // DomHelper.setTheme("classic-dark");
   }, []);
   
   return (
-    <div className="{style.bryntumContainer}">
-      <BryntumGrid ref={ref} {...gridConfig} />
+    <div className="bryntumContainer">
+      <div className="gridContainer">
+        <BryntumGrid ref={ref} {...gridConfig} />
+      </div>
+      <div className="ganttContainer">
+        <GanttInstance />
+      </div>
     </div>
   );
 };

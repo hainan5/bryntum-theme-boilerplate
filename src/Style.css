@@ -1,0 +1,27 @@
+/**整体**/
+.bryntumContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+/**grid**/
+.gridContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+/**gantt**/
+.ganttContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+/**修改gannt样式**/
+.b-gantt-task {
+    background-color: purple;
+}
+
+/**修改grid样式**/
+.b-toolbar {
+    background-color: purple;
+}
