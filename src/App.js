@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BryntumGrid } from "@bryntum/grid-react";
 import { DomHelper } from "@bryntum/grid/grid.umd";
+import style from "./App.css";
 
 const dataGenerate = (number) => {
   const data = [];
@@ -12,8 +13,14 @@ const dataGenerate = (number) => {
     "Mike Thomas",
   ];
   const city = ["Paris", "Dubai", "Los Angeles", "New York", "Moscow"];
+  const ages = [24, 28, 32, 34, 36];
   for (let i = 0; i < number; i++) {
-    data.push({ id: i + 1, name: names[i % 5], city: city[i % 5], age: 24 });
+    data.push({
+      id: i + 1,
+      name: names[i % 5],
+      city: city[i % 5],
+      age: ages[i % 5],
+    });
   }
   return data;
 };
@@ -61,10 +68,9 @@ const App = (props) => {
         flex: 1,
         htmlEncode: false,
         renderer: ({ value }) => {
-          if (value > 30) {
-            return `<span style="color: red; font-weight: bold">${value}</span>`;
-          }
-          return value;
+          return `<i class="b-fa ${
+            value < 30 ? "b-fa-child" : "b-fa-male"
+          }"></i>`;
         },
       },
     ],
@@ -77,12 +83,12 @@ const App = (props) => {
         items: [
           {
             ref: "material",
-            text:'material',
+            text: "material",
             onClick: ({ source }) => {
               DomHelper.setTheme("material");
               // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.material.css");
             },
-            cls:"b-raised"
+            cls: "b-raised",
           },
           {
             ref: "classic-dark",
@@ -94,12 +100,12 @@ const App = (props) => {
           },
           {
             ref: "classic-light",
-            text:'classic-light',
+            text: "classic-light",
             onClick: ({ source }) => {
               DomHelper.setTheme("classic-light");
               // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic-light.css");
             },
-            cls:"b-raised"
+            cls: "b-raised",
           },
           {
             ref: "classic",
@@ -116,7 +122,7 @@ const App = (props) => {
               DomHelper.setTheme("custom");
               // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.custom.css");
             },
-            cls:"b-raised"
+            cls: "b-raised",
           },
         ],
       },
@@ -126,9 +132,9 @@ const App = (props) => {
   useEffect(() => {
     // DomHelper.setTheme("classic-dark");
   }, []);
-
+  
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="{style.bryntumContainer}">
       <BryntumGrid ref={ref} {...gridConfig} />
     </div>
   );
