@@ -1,6 +1,11 @@
-import { CSSHelper, Gantt } from "@bryntum/gantt";
+import { CSSHelper, DomHelper, Gantt } from "@bryntum/gantt";
 import {Component} from "react";
 import "./gantt.css";
+
+CSSHelper.insertRule(`.b-gantt-task {
+    background-color: purple;
+  }
+  `);
 
 export default class GanntComp extends Component {
     componentDidMount() {
@@ -54,7 +59,54 @@ export default class GanntComp extends Component {
                 })
                 )
             ];
-        }
+        },
+        tbar:     {
+            type: "buttonGroup",
+            items: [
+              {
+                ref: "material",
+                text: "material",
+                onClick: ({ source }) => {
+                  DomHelper.setTheme("material");
+                  // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.material.css");
+                },
+                cls: "b-raised",
+              },
+              {
+                ref: "classic-dark",
+                text: "classic-dark",
+                onClick: ({ source }) => {
+                  DomHelper.setTheme("classic-dark");
+                  // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic-dark.css");
+                },
+              },
+              {
+                ref: "classic-light",
+                text: "classic-light",
+                onClick: ({ source }) => {
+                  DomHelper.setTheme("classic-light");
+                  // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic-light.css");
+                },
+                cls: "b-raised",
+              },
+              {
+                ref: "classic",
+                text: "classic",
+                onClick: ({ source }) => {
+                  DomHelper.setTheme("classic");
+                  // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic.css");
+                },
+              },
+              {
+                ref: "stockholm",
+                text: "stockholm",
+                onClick: ({ source }) => {
+                  DomHelper.setTheme("stockholm");
+                  // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic.css");
+                },
+              }
+            ],
+          },
     });
     }
     render() {
