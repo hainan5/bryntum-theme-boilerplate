@@ -1,11 +1,10 @@
 import { CSSHelper, DomHelper, Gantt } from "@bryntum/gantt";
 import {Component} from "react";
-import "./gantt.css";
 
-// CSSHelper.insertRule(`.b-gantt-task {
-//     background-color: purple;
-//   }
-//   `);
+CSSHelper.insertRule(`.b-gantt-task {
+    background-color: purple;
+  }
+  `);
 
 export default class GanntComp extends Component {
     componentDidMount() {

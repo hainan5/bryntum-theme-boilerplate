@@ -58,8 +58,7 @@ export default class GridComp extends Component {
                       ref: "material",
                       text: "material",
                       onClick: ({ source }) => {
-                        DomHelper.setTheme("material");
-                        // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.material.css");
+                        DomHelper.setTheme("material");      
                       },
                       cls: "b-raised",
                     },
@@ -68,7 +67,6 @@ export default class GridComp extends Component {
                       text: "classic-dark",
                       onClick: ({ source }) => {
                         DomHelper.setTheme("classic-dark");
-                        // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic-dark.css");
                       },
                     },
                     {
@@ -76,7 +74,6 @@ export default class GridComp extends Component {
                       text: "classic-light",
                       onClick: ({ source }) => {
                         DomHelper.setTheme("classic-light");
-                        // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic-light.css");
                       },
                       cls: "b-raised",
                     },
@@ -85,7 +82,6 @@ export default class GridComp extends Component {
                       text: "classic",
                       onClick: ({ source }) => {
                         DomHelper.setTheme("classic");
-                        // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.classic.css");
                       },
                     },
                     {
@@ -93,7 +89,6 @@ export default class GridComp extends Component {
                       text: "custom",
                       onClick: ({ source }) => {
                         DomHelper.setTheme("custom");
-                        // document.getElementById("bryntum-theme").setAttribute("href","http://localhost:3000/themes/grid.custom.css");
                       },
                       cls: "b-raised",
                     },

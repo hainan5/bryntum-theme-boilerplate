@@ -12,3 +12,5 @@ DomHelper.setTheme("material");
 动态引入
 document.getElementById("bryntum-theme").setAttribute("href","path-to/grid.material.css");
 ```
+
+#####分别是用函数组件 、类组件 生成gantt组件，排除渲染方式对主题样式的影响
