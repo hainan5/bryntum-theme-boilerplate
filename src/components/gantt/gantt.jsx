@@ -2,15 +2,15 @@ import { CSSHelper, DomHelper, Gantt } from "@bryntum/gantt";
 import {Component} from "react";
 import "./gantt.css";
 
-CSSHelper.insertRule(`.b-gantt-task {
-    background-color: purple;
-  }
-  `);
+// CSSHelper.insertRule(`.b-gantt-task {
+//     background-color: purple;
+//   }
+//   `);
 
 export default class GanntComp extends Component {
     componentDidMount() {
       const GanttInstance = new Gantt({
-        appendTo : 'demo',
+        appendTo : 'GanntComp',
     
         rowHeight         : 80,
         height            : 200,
@@ -111,7 +111,7 @@ export default class GanntComp extends Component {
     }
     render() {
       return <>
-      <div id="demo"></div>
+      <div id="GanntComp"></div>
       </>
     }
   

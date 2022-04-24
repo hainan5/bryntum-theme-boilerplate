@@ -1,4 +1,4 @@
-/**整体**/
+/**入口全局CSS**/
 .bryntumContainer {
     width: 100vw;
     height: 100vh;
@@ -17,11 +17,11 @@
 }
 
 /**修改gannt样式**/
-/* .b-gantt-task {
-    background-color: purple;
-} */
-
-/**修改grid样式**/
-.b-toolbar {
+.b-gantt-task {
     background-color: purple;
 }
+
+/**修改grid样式**/
+/* .b-toolbar {
+    background-color: purple;
+} */
